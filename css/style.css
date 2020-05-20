@@ -43,7 +43,7 @@ a{
 
 .header{
     padding-top:25px;
-    background: url(img/fon-sky.png) no-repeat center;
+    background: url(img/background-banner.jpg) no-repeat center;
 }
 
 .header-navigation{
@@ -68,3 +68,4 @@ a{
 .header-navigation-item:hover{
     color:#27AE60;
 }
+
