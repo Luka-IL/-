@@ -17,6 +17,13 @@ body {
     padding: 0 15px 0 15px;
 }
 
+.container-2{
+    max-width:1920px;
+    width:100%;
+    margin:auto;
+    padding: 0 15px 0 15px;
+}
+
 h1 {
     font-size: 50px;
     font-weight: bold;
@@ -45,6 +52,7 @@ a {
 .header {
     padding-top: 25px;
     background: url(img/background-banner.jpg) no-repeat center;
+    background-size: cover;
 }
 
 .header-navigation {
@@ -89,6 +97,7 @@ a {
     width: 70%;
     font-size: 23px;
     margin-top: 31px;
+    margin-bottom:57px;
 }
 
 .btn {
@@ -96,7 +105,6 @@ a {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin-top: 57px;
     width: 233px;
     height: 57px;
     border-radius: 65px;
@@ -106,7 +114,11 @@ a {
     font-weight: bold;
     color: white;
     text-align: left;
-    box-shadow: 0px 2px 6px 4px rgba(25, 130, 189, .11);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .25);
+}
+
+.btn:focus{
+    outline-style: none;
 }
 
 
@@ -236,15 +248,16 @@ a {
     display: none;
 }
 
-
-
-.advantages {
+.advantages{
     width:100%;
-    display: flex;
-    position: relative;
+    background-color: #27AE60;
     padding-top: 68px;
     margin-top: 390px;
-    background-color: #27AE60;
+}
+
+.advantages .container-2{
+    display: flex;
+    position: relative;
 }
 
 .advantages-doctor {
@@ -338,20 +351,199 @@ a {
     padding-top: 155px;
 }
 
-.products-title {
+.products-title-btn{
+    position: relative;
+}
+
+.products-title{
     max-width: 511px;
     text-align: center;
 }
 
+.products-btn{
+    position: absolute;
+    width:53px;
+    height:53px;
+    border:none;
+    border-radius: 50%;
+    background-color:#27AE60;
+    top:340px;
+    z-index: 1;
+}
+
+.products-btn::after{
+    content: '';
+    display: block;
+    position: absolute;
+    padding: 5px;
+    border-left:2px solid white;
+    border-top:2px solid white;
+    top:20px;
+    left:19px;
+    transform: rotate(-225deg);
+}
+
+.products-btn-right{
+    left:-148px;
+    transform: rotate(-180deg)
+}
+
+.products-btn-left{
+    right:-125px;
+}
+
 .products-list {
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
+    margin-top:84px;
 }
 
 .products-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 32%;
     overflow: hidden;
+    border-radius: 10px;
+}
+
+.products-opacity{
+    opacity: 0.3;
+}
+
+.products-item-title{
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+.products-item-text{
+    padding:0 30px;
+    text-align: center;
+    color:#6C997F;
+    font-weight: 600;
+}
+
+.why{
+    padding-top:200px;
+    background: url(img/background-delivery.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.why .container-2{
+    display: flex;
+    justify-content: center;
+    background: url(img/tree.png) no-repeat 0px 150px
+}
+
+.why-image{
+
+}
+
+.why-list{
+    width:520px;
+    margin:100px 0 0 -350px;
+}
+
+.why-list-items{
+    margin-top:85px;
+}
+
+.why-item{
+    position: relative;
+    padding-left:90px;
+    margin-bottom:37px;
+}
+
+.why-item::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width:60px;
+    height:60px;
+    background: url(img/leaf.svg) no-repeat center white;
+    border-radius: 50%;
+    left:10px;
+    box-shadow: 0 0 35px 1px rgba(25, 130, 189, 0.18)
+}
+
+.why-item:nth-child(2)::before{
+    background: url(img/checkmark.svg) no-repeat center white;
+}
+
+.why-item:nth-child(3)::before{
+    background: url(img/curved-arrow.svg) no-repeat center white;
+}
+
+.why-item:nth-child(4)::before{
+    background: url(img/health-care.svg) no-repeat center white;
+}
+
+.why-item-title{
+    margin-bottom:11px;
+}
+
+.why-item-text{
+    font-size:18px;
+}
+
+.instagram{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.instagram-title{
+    margin-bottom:11px;
+}
+
+.order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-subtitle{
+    margin:22px 0 65px 0;
+}
+
+.order-form{
+    display: flex;
+}
+
+.order-form-input{
+    box-sizing: border-box;
+    width:403px;
+    margin-right: 17px;
+    padding-left:45px;
+    background-color: #E8F7EE;
+    border: none;
+    border-radius: 65px;
+    outline-style: none;
+}
+
+.order-form-input::placeholder{
+    color:#B2DAC2;
+    font-size: 14px;
+}
+
+.footer{
+    padding-top:50px;
+    margin-top:167px;
+    background-color: #27AE60;
+}
+
+.footer .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title{
+    margin-bottom:40px;
+    font-size:18px;
+    color:white;
+    font-weight: bold;
+}
+
+.footer-navigation{
+    display:flex;
 }
