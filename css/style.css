@@ -4,7 +4,6 @@
 }
 
 body {
-    max-width: 1920px;
     width: 100%;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -124,8 +123,8 @@ a {
     left: -7px;
 }
 
-.order-btn-text{
-    margin-left:30px;
+.order-btn-text {
+    margin-left: 30px;
 }
 
 .btn-arrow {
@@ -135,7 +134,7 @@ a {
     height: 43px;
     background-color: #35B86C;
     border-radius: 50%;
-    margin-right:7px;
+    margin-right: 7px;
 }
 
 .btn-arrow::after {
@@ -145,9 +144,8 @@ a {
     width: 20px;
     height: 14px;
     background: url(img/arrow.svg);
-    top:14px;
-    right:12px
-
+    top: 14px;
+    right: 12px
 }
 
 .header-mom {
@@ -221,24 +219,139 @@ a {
     opacity: 0.1;
 }
 
-.header-image-list{
+.header-image-list {
     position: absolute;
-    top:-190px;
-    left:-110px;
-    
+    top: -190px;
+    left: -110px;
+
 }
 
-.image-woman-apple{
+.image-expectant {}
+
+.image-woman-apple {
     display: none;
 }
 
-.image-woman-child{
+.image-woman-child {
     display: none;
 }
 
 
 
 .advantages {
-    margin-top: 400px;
+    width:100%;
+    display: flex;
+    position: relative;
+    padding-top: 68px;
+    margin-top: 390px;
+    background-color: #27AE60;
 }
 
+.advantages-doctor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 40%;
+    margin-bottom: -25px
+}
+
+.advantages-doctor-photo {
+    position: absolute;
+
+}
+
+.advantages-doctor-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 337px;
+    height: 62px;
+    border: 1px dashed rgba(25, 130, 189, .21);
+    ;
+    background-color: #FFFFFF;
+    border-radius: 65px;
+}
+
+.advantages-doctor-card::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 338px;
+    height: 63px;
+    border: 5px solid white;
+    border-radius: 65px;
+}
+
+.advantages-doctor-name {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.advantages-doctor-position {
+    font-size: 14px;
+    color: #6C997F
+}
+
+.advantages-list {
+    width: 60%;
+}
+
+.advantages-list-title {
+    color: white;
+}
+
+.advantages-list-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 40px 42px;
+    max-width: 791px;
+    height: 122px;
+    margin: 58px 0 83px 0;
+    font-size: 20px;
+    color: white;
+}
+
+.advantages-item {
+    position: relative;
+    padding-left: 39px;
+    margin-bottom: 19px;
+}
+
+.advantages-item::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(img/checkmark-proper-diet.svg) no-repeat center;
+    left: 10px;
+    top: 2px;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    padding-top: 155px;
+}
+
+.products-title {
+    max-width: 511px;
+    text-align: center;
+}
+
+.products-list {
+    display: flex;
+    justify-content: space-around
+}
+
+.products-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    overflow: hidden;
+}
