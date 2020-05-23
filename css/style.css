@@ -160,52 +160,66 @@ a {
     right: 12px
 }
 
-.header-mom {
+.header-mom{
+    width:57%;
+    display: flex;
+    position: relative;
+}
+
+.header-mom-list{
     position: relative;
     margin-top: 270px;
-    margin-left: 62px;
+    margin-left: 72px;
 }
 
-.header-mom-item {
-    margin-bottom: 140px;
+.header-mom-item{
+    width:250px;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    font-size: 14px;
+    margin-bottom:130px;
 }
 
-.header-mom-item:nth-child(3) {
-    margin: 0;
+.mom-item-label{
+    font-size:14px;
+    opacity: 0.33;
+    z-index: 1;
+    transition-duration: 0.5s;
 }
 
-.header-mom-item:nth-child(2) {
-    margin-left: -24px
+.label-hover{
+    font-size:18px;
+    opacity: 1;
+    transition-duration: 0.5s;
 }
 
 .mom-item-circle {
-    position: relative;
-    box-sizing: border-box;
-    width: 17.5px;
-    height: 17.5px;
-    margin-left: 14px;
-    background-color: #27AE60;
-    border: 0px;
-    border-radius: 50%;
-    opacity: 0.53;
-
-}
-
-.mom-item-circle::after {
-    content: '';
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
     width: 28.5px;
     height: 28.5px;
-    border: 1px solid #27AE60;
-    border-radius: 50%;
-    top: -5.5px;
-    left: -5.5px;
+    margin-left: 14px;
+    background: url(img/rounds.svg) no-repeat;
     opacity: 0.53;
+    border: none;
+    outline: none;
+    transition-duration: 0.5s;
+}
+
+.circle-hover{
+    transition-duration:0.5s;
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.circle-active{
+    opacity: 1;
+}
+
+#expectant{
+    margin-right:5px;
+}
+
+#woman-child{
+    margin-right:60px
 }
 
 .header-circle {
@@ -213,8 +227,8 @@ a {
     width: 420px;
     height: 420px;
     background: url(img/header-circle.svg) no-repeat center;
-    top: -70px;
-    left: 133px
+    top: 230px;
+    left: 290px
 }
 
 .header-circle::after {
@@ -231,19 +245,34 @@ a {
     opacity: 0.1;
 }
 
-.header-image-list {
+.header-image-block{
     position: absolute;
-    top: -190px;
-    left: -110px;
+}
 
+.image-expectant{
+    width:910px;
+    top:-90px;
+    left:-20px;
 }
 
 .image-woman-apple {
     display: none;
+    width:450px;
+    top:10px;
+    left:10px;
 }
 
 .image-woman-child {
     display: none;
+    width:500px;
+    top:10px;
+    left:10px;
+    
+}
+
+.header-image-item{
+    width:100%;
+    height: 100%;
 }
 
 .advantages {
@@ -543,19 +572,27 @@ a {
     align-items: center;
 }
 
+.order-title{
+    text-align: center;
+}
+
 .order-subtitle {
     margin: 22px 0 65px 0;
+    text-align: center;
 }
 
 .order-form {
     display: flex;
-    margin-bottom: 167px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
 }
 
 .order-form-input {
     box-sizing: border-box;
     width: 403px;
-    margin-right: 17px;
+    height: 57px;
+    margin: 0 17px 15px 0;
     padding-left: 45px;
     background-color: #E8F7EE;
     border: none;
