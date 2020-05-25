@@ -114,6 +114,7 @@ a {
     text-align: left;
     border-radius: 65px;
     border: 1px solid #000000;
+    outline: none;
     background-color: #27AE60;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .25);
     cursor: pointer;
@@ -126,27 +127,23 @@ a {
     transition-duration: 0.3s;
 }
 
-.btn:focus {
-    outline-style: none;
-}
-
-
 
 .btn::after,
 .btn-hover::after {
     box-sizing: border-box;
     content: '';
     position: absolute;
-    width: 245px;
-    height: 67px;
+    width: 242px;
+    height: 66px;
     border: 1px solid rgba(25, 130, 189, .11);
     border-radius: 65px;
     top: -5.5px;
-    left: -7px;
+    left: -5.5px;
+    outline: none;
 }
 
 .btn-hover::after {
-    border: 6px solid #27AE60;
+    border: 5px solid #27AE60;
 }
 
 .order-btn-text {
@@ -203,19 +200,18 @@ a {
 .mom-item-block {
     display: flex;
     align-items: center;
+    opacity: 0.35;
+    z-index: 1;
 }
 
 .mom-item-label {
     font-size: 14px;
-    opacity: 0.33;
-    z-index: 1;
     cursor: pointer;
     transition-duration: 0.5s;
 }
 
 .label-hover {
     font-size: 18px;
-    opacity: 1;
     transition-duration: 0.5s;
 }
 
@@ -224,12 +220,10 @@ a {
     height: 28.5px;
     margin-left: 14px;
     background: url(img/rounds.svg) no-repeat;
-    opacity: 0.53;
     border: none;
     outline: none;
     transition-duration: 0.5s;
     cursor: pointer;
-    z-index: 1;
 }
 
 .circle-hover {
@@ -308,7 +302,7 @@ a {
 .advantages {
     width: 100%;
     background-color: #27AE60;
-    margin-top: 390px;
+    margin-top: 220px;
     background-image: linear-gradient(90deg, #27ae60 0%, rgba(39, 174, 96, 0.97) 100%), url(img/pattern-proper-diet.png);
     background-repeat: repeat;
 }
@@ -454,7 +448,7 @@ a {
     top: 340px;
     outline: none;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
 }
 
 .products-btn:hover{
@@ -479,17 +473,15 @@ a {
 }
 
 .products-btn-left {
-    left: -145px;
+    left: -125px;
     transform: rotate(-180deg)
 }
 
 .products-btn-right {
-    right: -145px;
+    right: -125px;
 }
 
 .products-list {
-    display: flex;
-    justify-content: space-around;
     margin-top: 84px;
 }
 
@@ -497,9 +489,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 32%;
+    width: 620px;
+    height:400px;
     overflow: hidden;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 83px 0 rgba(30, 30, 30, .07)
 }
@@ -632,14 +625,20 @@ a {
 
 .order-form-input {
     box-sizing: border-box;
-    width: 403px;
+    width: 358px;
     height: 57px;
     margin: 0 17px 15px 0;
     padding-left: 45px;
     background-color: #E8F7EE;
-    border: none;
+    border: 1px solid white;
     border-radius: 65px;
     outline-style: none;
+    transition-duration: 0.5s;
+}
+
+.order-form-input:hover{
+    background-color:white;
+    border:1px solid #27AE60;
 }
 
 .order-form-input::placeholder {
