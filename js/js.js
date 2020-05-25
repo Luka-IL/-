@@ -1,19 +1,34 @@
 $(document).ready(function () {
 
-    $('.mom-item-circle').hover(function() {
-        $(this).addClass('circle-hover');
-        $(this).prev().addClass('label-hover');
-    }, function() {
-        $(this).removeClass('circle-hover');
-        $(this).prev().removeClass('label-hover');
+    $('.mom-item-block').hover(function () {
+        $(this).children('label').addClass('label-hover');
+        $(this).children('input').addClass('circle-hover');
+    }, function () {
+        $(this).children('label').removeClass('label-hover');
+        $(this).children('input').removeClass('circle-hover');
+    });
+
+    $('.mom-item-block').on('click', function () {
+        console.log('11');
+        $('.mom-item-label').removeClass('opacity');
+        $('.mom-item-circle').removeClass('opacity');
+
+        $(this).children('label').addClass('opacity');
+        $(this).children('input').addClass('opacity');
+
+        $('.header-image-block').removeClass('opacity');
+        $(this).siblings('.header-image-block').addClass('opacity');
+    });
+
+    $('.btn').hover(function () {
+        $(this).removeClass('btn').addClass('btn-hover');
+        $(this).children('.btn-arrow').removeClass('btn-arrow').addClass('btn-arrow-hover')
+    }, function () {
+        $(this).removeClass('btn-hover').addClass('btn');
+        $(this).children('.btn-arrow-hover').removeClass('btn-arrow-hover').addClass('btn-arrow')
     })
     
-   $('.mom-item-label').hover(function() {
-        $(this).addClass('label-hover');
-        $(this).next().addClass('circle-hover');
-    }, function() {
-        $(this).removeClass('label-hover');
-        $(this).next().removeClass('circle-hover');
-    }) 
-    
+    let firstSlide = $('.products-list').first().clone();
+    console.log(firstSlide);
+
 })
