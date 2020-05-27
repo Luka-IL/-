@@ -4,24 +4,30 @@
 }
 
 body {
-    width: 100vw;
+    max-width: 100%;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     box-sizing: border-box;
+
 }
 
 .container {
+    box-sizing: border-box;
     max-width: 1190px;
     width: 100%;
+    padding: 0 15px;
     margin: auto;
-    padding: 0 15px 0 15px;
 }
 
 .container-2 {
+    box-sizing: border-box;
     max-width: 1920px;
     width: 100%;
     margin: auto;
-    padding: 0 15px 0 15px;
+    padding: 0 15px;
+    overflow-x: hidden;
+    overflow-y: visible;
+
 }
 
 h1 {
@@ -718,7 +724,8 @@ a {
     justify-content: center;
     align-items: flex-end;
     min-width: 600px;
-    margin-bottom: -25px
+    margin-bottom: -25px;
+
 }
 
 @media (max-width:1000px) {
@@ -751,7 +758,6 @@ a {
     background: url(img/circles.svg) no-repeat center;
     bottom: -280px;
     right: -47%;
-    overflow: hidden;
 }
 
 .advantages-doctor::before {
@@ -965,6 +971,13 @@ a {
     z-index: 2;
 }
 
+@media (max-width:600px) {
+    .products-btn {
+        width: 33px;
+        height: 33px;
+        top: 400px;
+    }
+}
 
 .products-btn:hover {
     background-color: white;
@@ -983,6 +996,14 @@ a {
     transform: rotate(-225deg);
 }
 
+@media (max-width:600px) {
+    .products-btn::after {
+        padding: 3px;
+        top: 13px;
+        left: 12px;
+    }
+}
+
 .products-btn:hover::after {
     border-color: #27AE60;
 }
@@ -992,8 +1013,20 @@ a {
     transform: rotate(-180deg)
 }
 
+@media (max-width:800px) {
+    .products-btn-left {
+        left: 0px;
+    }
+}
+
 .products-btn-right {
     right: -125px;
+}
+
+@media (max-width:800px) {
+    .products-btn-right {
+    right: 0px;
+    }
 }
 
 .products-list {
@@ -1010,6 +1043,16 @@ a {
     padding-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 83px 0 rgba(30, 30, 30, .07)
+}
+
+@media (max-width:800px) {
+    .products-item {
+        width: 280px;
+    }
+}
+
+.products-item-image {
+    object-fit: cover;
 }
 
 .products-opacity {
@@ -1179,7 +1222,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .instagram-title {
@@ -1215,7 +1258,6 @@ a {
 @media (max-width:700px) {
     .instagram-image {
         margin-top: -15px;
-        width: 800px
     }
 }
 
@@ -1294,7 +1336,8 @@ a {
 .footer .container {
     display: flex;
     flex-direction: column;
-    width: 840px;
+    max-width: 840px;
+    padding-left: 15px;
 }
 
 .footer-title {
@@ -1313,7 +1356,7 @@ a {
 @media(max-width:700px) {
     .footer-navigation {
         flex-direction: column;
-            margin-bottom: 20px;
+        margin-bottom: 20px;
     }
 }
 
