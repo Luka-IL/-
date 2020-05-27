@@ -17,7 +17,11 @@
         <div class="container">
             <div class="header-navigation">
                 <p class="header-navigation-title"><a href="#">Здоровая мама</a></p>
-                <div class="navigation-burger-menu"></div>
+                <div class="navigation-burger-menu" id='burger-menu'>
+                    <div class="line-menu half start"></div>
+                    <div class="line-menu"></div>
+                    <div class="line-menu half end"></div>
+                </div>
                 <nav class="header-navigation-list" id='menu'>
                     <a href='#advantages' class="header-navigation-item">Важность правильного питания</a>
                     <a href='#why' class="header-navigation-item">Почему мы?</a>
@@ -32,12 +36,15 @@
                 </div>
                 <div class="header-mom">
                     <div class="header-circle"></div>
-                    <ul class="header-mom-list">
+                    <button class="header-mom-btn header-mom-btn-left"></button>
+                    <button class="header-mom-btn header-mom-btn-right"></button>
+                    <ul class="header-mom-list owl-theme">
                         <li class="header-mom-item">
                             <div class="mom-item-block opacity">
                                 <label for="expectant" class="mom-item-label" name="input-block">Для беременных</label>
                                 <input type="button" id='expectant' name="input-block" class="mom-item-circle">
                             </div>
+                            <div class="header-label-700">Для беременных</div>
                             <div class="header-image-block image-expectant opacity">
                                 <img src="css/img/slider-banner-expectant.png" alt="Беременная девушка" class="header-image-item" width='1065' height='737'>
                             </div>
@@ -47,6 +54,7 @@
                                 <label for="woman-child" class="mom-item-label">Для кормящих</label>
                                 <input type="button" id='woman-child' class="mom-item-circle">
                             </div>
+                            <div class="header-label-700">Для кормящих</div>
                             <div class="header-image-block image-woman-child">
                                 <img src="css/img/slider-banner-nursing.png" alt="Девушка держит ребенка в руках" class="header-image-item">
                             </div>
@@ -56,6 +64,7 @@
                                 <label for="woman-apple" class="mom-item-label" id='advantages'>Безопассные лакомства</label>
                                 <input type="button" id='woman-apple' class="mom-item-circle">
                             </div>
+                            <div class="header-label-700">Безопассные лакомства</div>
                             <div class="header-image-block image-woman-apple">
                                 <img src="css/img/slider-banner-safe-treats.png" alt="Девушка ест яблоко" class="header-image-item">
                             </div>
@@ -157,7 +166,7 @@
                 <p class="order-subtitle">Оставьте заявку и наш оператор свяжется с Вами для уточнения деталей</p>
                 <form action="" class="order-form">
                     <input type="text" class="order-form-input" placeholder='Ваше имя' title='Заполните это поле'>
-                    <input type="tel" id='phone' class="order-form-input" placeholder='Ваш телефон' title='Заполните это поле'  pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+                    <input type="tel" id='phone' class="order-form-input" placeholder='Ваш телефон' title='Заполните это поле' pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
                     <button class="btn order-form-btn"><span class='order-btn-text'>Оформить заказ</span> <span class="btn-arrow"></span></button>
                 </form>
             </div>
@@ -173,9 +182,9 @@
             </ul>
             <ul class="footer-regulations">
                 <li class="footer-regulations-item">
-                <a href="#">Политика конфиденциальности</a></li>
+                    <a href="#">Политика конфиденциальности</a></li>
                 <li class="footer-regulations-item">
-                <a href="#">Условия онлайн-успользования</a></li>
+                    <a href="#">Условия онлайн-успользования</a></li>
             </ul>
         </div>
     </footer>

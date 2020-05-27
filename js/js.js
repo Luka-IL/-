@@ -13,7 +13,7 @@ $(document).ready(function () {
     //Смена изображений при клике на input в header-mom
 
     $('.mom-item-block').on('click', function () {
- 
+
         $('.mom-item-block').removeClass('opacity');
         $(this).addClass('opacity');
 
@@ -22,7 +22,7 @@ $(document).ready(function () {
     });
 
     //Стиль кнопки "оформить заказ" при наведении
-    
+
     $('.btn').hover(function () {
         $(this).removeClass('btn').addClass('btn-hover');
         $(this).children('.btn-arrow').removeClass('btn-arrow').addClass('btn-arrow-hover')
@@ -30,7 +30,7 @@ $(document).ready(function () {
         $(this).removeClass('btn-hover').addClass('btn');
         $(this).children('.btn-arrow-hover').removeClass('btn-arrow-hover').addClass('btn-arrow')
     });
-    
+
     //Карусель с продуктами
 
     let owl = $('.owl-carousel');
@@ -40,8 +40,8 @@ $(document).ready(function () {
         autoWidth: true,
         center: true
     });
-    
-    //Свои кнопки переключения
+
+    //Свои кнопки переключения карусели
 
     $('.products-btn-right').click(function () {
         owl.trigger('next.owl.carousel', [500]);
@@ -50,7 +50,7 @@ $(document).ready(function () {
     $('.products-btn-left').click(function () {
         owl.trigger('prev.owl.carousel', [500]);
     })
-    
+
     //Изменение прозрачности при смене прокрутке
 
     owl.on('changed.owl.carousel', function (event) {
@@ -58,20 +58,78 @@ $(document).ready(function () {
         $('.products-item').addClass('products-opacity')
         $('div article:eq(' + numEv + ')').removeClass('products-opacity')
     })
-    
+
     //Маска на форму с телефоном
 
     $(function () {
         $("#phone").mask("8(999) 999-9999");
     });
-    
+
     //Плавный скролл по якорям
-    
-     $("#menu").on("click","a", function (event) {
+
+    $("#menu").on("click", "a", function (event) {
         event.preventDefault();
-        var id  = $(this).attr('href'),
+        var id = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1000);
+        $('body,html').animate({
+            scrollTop: top
+        }, 1000);
     });
 
+    // Бургер меню
+
+    let wrapperMenu = $('.navigation-burger-menu');
+
+    wrapperMenu.on('click', function () {
+        wrapperMenu.toggleClass('open');
+
+        //Выпадающая навигация 
+
+        $('.header-navigation-list').toggleClass('nav-block');
+        $('body').toggleClass('body-overflow');
+        $('.header-navigation-title').toggleClass('title-color-white');
+        $('.line-menu').toggleClass('line-menu-background');
+    })
+
+
+
+    $('#menu a').on('click', function () {
+        $('.header-navigation-list').removeClass('nav-block');
+        $('body').removeClass('body-overflow');
+        $('.header-navigation-title').removeClass('title-color-white');
+        $('.line-menu').removeClass('line-menu-background');
+        wrapperMenu.removeClass('open');
+    })
+
+    //Карусель в header 
+
+    let startCarousel = function () {
+        let carouselMom = $('.header-mom-list')
+        if ($(window).width() < 700) {
+            carouselMom.addClass('owl-carousel');
+            carouselMom.owlCarousel({
+                loop: true,
+                autoWidth: true,
+            });
+
+            //Кнопки прокрутки
+
+            $('.header-mom-btn-right').click(function () {
+                carouselMom.trigger('next.owl.carousel', [500]);
+            })
+
+            $('.header-mom-btn-left').click(function () {
+                carouselMom.trigger('prev.owl.carousel', [500]);
+            })
+        } else {
+            carouselMom.removeClass('owl-carousel');
+            carouselMom.trigger('destroy.owl.carousel')
+        };
+    }
+
+    startCarousel() //Проверка ширины при запуске 
+
+    $(window).resize(function () {
+        startCarousel() //При изменении ширины окна
+    })
 })
