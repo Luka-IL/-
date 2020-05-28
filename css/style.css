@@ -4,7 +4,7 @@
 }
 
 body {
-    max-width: 100%;
+    max-width: 100vw;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     box-sizing: border-box;
@@ -26,7 +26,6 @@ body {
     width: 100%;
     margin: auto;
     padding: 0 15px;
-
 }
 
 h1 {
@@ -53,6 +52,8 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+
 
 .header {
     padding-top: 25px;
@@ -697,6 +698,10 @@ a {
     height: 100%;
 }
 
+main {
+    overflow-x: hidden;
+}
+
 .advantages {
     width: 100%;
     background-color: #27AE60;
@@ -705,15 +710,15 @@ a {
     background-repeat: repeat;
 }
 
-@media (max-width:1000px){
+@media (max-width:1000px) {
     .advantages {
-    margin-top:60px;
+        margin-top: 60px;
     }
 }
 
-@media (max-width:700px){
+@media (max-width:700px) {
     .advantages {
-    margin-top:0px;
+        margin-top: 0px;
     }
 }
 
@@ -957,6 +962,7 @@ a {
     align-items: center;
     width: 100%;
     padding: 155px 0 0 0;
+
 }
 
 .products-title-btn {
@@ -1037,7 +1043,7 @@ a {
 
 @media (max-width:800px) {
     .products-btn-right {
-    right: 8px;
+        right: 8px;
     }
 }
 
@@ -1098,7 +1104,8 @@ a {
 .why .container-2 {
     display: flex;
     justify-content: flex-start;
-    background: url(img/tree.png) no-repeat 0px 150px
+    background: url(img/tree.png) no-repeat 0px 150px;
+
 }
 
 @media (max-width:1000px) {
