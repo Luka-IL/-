@@ -33,8 +33,8 @@ $(document).ready(function () {
 
     //Карусель с продуктами
 
-    let owl = $('.owl-carousel');
-    owl.owlCarousel({
+    let productsCarousel = $('.products-list');
+    productsCarousel.owlCarousel({
         loop: true,
         margin: 25,
         autoWidth: true,
@@ -44,16 +44,16 @@ $(document).ready(function () {
     //Свои кнопки переключения карусели
 
     $('.products-btn-right').click(function () {
-        owl.trigger('next.owl.carousel', [500]);
+        productsCarousel.trigger('next.owl.carousel', [500]);
     })
 
     $('.products-btn-left').click(function () {
-        owl.trigger('prev.owl.carousel', [500]);
+        productsCarousel.trigger('prev.owl.carousel', [500]);
     })
 
     //Изменение прозрачности при смене прокрутке
 
-    owl.on('changed.owl.carousel', function (event) {
+    productsCarousel.on('changed.owl.carousel', function (event) {
         let numEv = event.item.index;
         $('.products-item').addClass('products-opacity')
         $('div article:eq(' + numEv + ')').removeClass('products-opacity')
@@ -109,7 +109,7 @@ $(document).ready(function () {
             carouselMom.addClass('owl-carousel');
             carouselMom.owlCarousel({
                 loop: true,
-                autoWidth: true,
+                autoWidth: true
             });
 
             //Кнопки прокрутки
@@ -129,7 +129,7 @@ $(document).ready(function () {
 
     startCarousel() //Проверка ширины при запуске 
 
-    $(window).resize(function () {
+    /*$(window).resize(function () {
         startCarousel() //При изменении ширины окна
-    })
+    })*/
 })
